@@ -89,7 +89,7 @@ router.post("/webhook", async (req, res) => {
           const media_data = await axios({
             method: "GET",
             url: `https://graph.facebook.com/v16.0/${media_id}/`,
-            headers: { Authorization: `Bearer ${process.env.WHATSAPP_TOKEN}` },
+            headers: { Authorization: `Bearer ${process.env.ACCESS_TOKEN}` },
           });
           media_url = media_data.data.url;
           file_type = media_data.data.mime_type;
