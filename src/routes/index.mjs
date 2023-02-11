@@ -140,7 +140,7 @@ router.post("/webhook", async (req, res) => {
     console.log("message_id ==> ", message_id);
     console.log("conversation_id ==> ", conversation_id);
     await db.upsertRecords(
-      "messages",
+      "message",
       "message_id,conversation_id,sender_id,receiver_id,status,received_body_type,message_body,media_url,file_type,file_size,timestamp",
       "?,?,?,?,?,?,?,?,?,?,?",
       [
