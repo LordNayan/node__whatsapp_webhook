@@ -1,6 +1,6 @@
-import { createPool } from "mysql2/promise";
+import mysqlPromise from "mysql2/promise.js";
 
-export const connection = createPool({
+export const connection = mysqlPromise.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
