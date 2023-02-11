@@ -1,5 +1,5 @@
 import * as _ from "lodash";
-import * as db from "../connections/sqlConnection.mjs";
+import db from "../connections/sqlConnection.mjs";
 const custom = {
   log: (message, ...arrayOfMessages) => {
     if (process.env.TRACE === "true") {
